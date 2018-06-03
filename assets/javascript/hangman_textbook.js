@@ -1,3 +1,5 @@
+//Taken from "Javascript for Kids - Nick Morgan"
+
 // Create an array of words
 var words = [
     "javascript",

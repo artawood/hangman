@@ -1,4 +1,6 @@
-//Hangman Game
+//Hangman Game Version 0.1
+
+//This version is getting basic understanding of flow and function of looping and using blank arrays. Started out with textbook study.
 
 //List of words as objects
 var words = [
