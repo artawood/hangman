@@ -8,9 +8,19 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
 <body>
+        <audio controls autoplay="true">
+                <source src="assets/sounds/simpsonTheme.mp3" type="audio/mpeg">
+              </audio>
     <h1>Hangman Game</h1>
+    <h2>Guess this word:</h2>
     <div id="game"></div>
+    <h2>Incorrect letters guessed:</h2>
     <div id="lettersGuessed"></div>
-    <script src="assets/javascript/test.js"></script>
+    
+    <audio id="winAudio"><source src="assets/sounds/tada.mp3"></audio>
+    <audio id="dohAudio"><source src="assets/sounds/doh.mp3"></audio>
+    <audio id="gameOverAudio"><source src="assets/sounds/homeCrap.wav"></audio>
+    <button onclick="playAgain()">Play again</button>
+    <script src="assets/javascript/game_0.3.js"></script>
 </body>
 </html>
