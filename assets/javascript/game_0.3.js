@@ -1,29 +1,32 @@
 //Hangman Game Version 0.3
 
-//Add validation/failcheck, counter, win sound
+//Add validation/failcheck, counter, and sounds
 
 //Plays sound when Player wins
-var themeSong = document.getElementById("themeSong");
-function themeSong() {
-    themeSong.addEventListener("load", function() {
-        themeSong.play();
-    })
+var intro = document.getElementById("intro");
+function introSound() {
+    intro.play();
 }
 
 function playAgain() {
     location.reload();
+    introSound();
 }//Play again. Reloads the page.
 
 //List of words as objects
 var words = [
-    "javascript",
-    "cat",
-    "four",
-    "jungle",
+    "springfield",
+    "marge",
+    "donut",
+    "flanders",
+    "apu",
+    "jay",
 ];
 
 //Lives
 var lives = 5;
+var showLives = document.getElementById("lives");
+showLives.textContent = lives;
 
 //Recorded Incorrect Guesses
 var incorrectGuesses = [];
@@ -31,6 +34,23 @@ var incorrectGuesses = [];
 //Pick random word
 var word = words[Math.floor(Math.random() * words.length)];
 console.log(word);
+
+//Hints
+var showHint = document.getElementById("hint");
+
+if (word === "springfield") {
+    showHint.textContent = "The city where I live and work";
+} else if (word === "marge") {
+    showHint.textContent = "I love her so much!";
+} else if (word === "donut") {
+    showHint.textContent = "Hmmmmmm!";
+} else if (word === "flanders") {
+    showHint.textContent = "My annoying neighbor";
+} else if (word === "apu") {
+    showHint.textContent = "Thank you, come again";
+} else if (word === "jay") {
+    showHint.textContent = "It's my middle name!";
+}
 
 //Answer Array
 var answerArray = [];
@@ -51,9 +71,9 @@ var remainingLetters = word.length;
 console.log("Remaining letters: " + remainingLetters);
 
 //Plays sound when Player wins
-var tada = document.getElementById("winAudio");
-function tadaSound() {
-    tada.play();
+var woohoo = document.getElementById("winAudio");
+function woohooSound() {
+    woohoo.play();
 }
 
 //Plays sound when Player guessed incorrect letter
@@ -62,7 +82,7 @@ function dohSound() {
     doh.play();
 }
 
-//Plays sound when Player guessed incorrect letter
+//Plays sound when Player dies
 var crap = document.getElementById("gameOverAudio");
 function crapSound() {
     crap.play();
@@ -75,6 +95,7 @@ function guess(letter) {
         var displayIncorrectLetters = document.getElementById("lettersGuessed");
         displayIncorrectLetters.textContent = incorrectGuesses.join(", ");
         lives--;
+        showLives.textContent = lives;
         dohSound();
         alert("You guessed " + letter + " and it's wrong. You have " + lives + " lives left");
         console.log("Number of lives: " + lives);
@@ -96,8 +117,8 @@ function guess(letter) {
     }
     targetDiv.textContent = answerArray.join(" "); //Update answersArray
     if (remainingLetters == 0) {
-        tadaSound();
-        alert("Congratulation! You guessed " + word + " correctly. Good Job!");
+        woohooSound();
+        alert("Woohoo! I was thinking of " + word + " !");
     } // If remaining letters equals zero, the player wins.
 }
 

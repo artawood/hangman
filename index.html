@@ -5,22 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hangman Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One|Gloria+Hallelujah|Jua|Short+Stack" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
 <body>
-        <audio controls autoplay="true">
-                <source src="assets/sounds/simpsonTheme.mp3" type="audio/mpeg">
-              </audio>
-    <h1>Hangman Game</h1>
-    <h2>Guess this word:</h2>
-    <div id="game"></div>
-    <h2>Incorrect letters guessed:</h2>
-    <div id="lettersGuessed"></div>
+    <audio id="intro" autoplay><source src="assets/sounds/simpsons.mp3" type="audio/mpeg"></audio>
+    <header>
+        <div class="row">
+                <div class="col-7">
+                    <img class="animate-cloud cloud-2" src="assets/images/cloud.png">
+                </div>
+                <div class="col-5">
+                    <img class="cloud-2" src="assets/images/cloud.png">
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-3">
+                <img class="animate-cloud cloud-1" src="assets/images/cloud.png">
+            </div>
+            <div class="col-6 text-center">
+                <h1 class="gloria">THE SIMPSONS</h1>
+                <h2 class="short-stack">Hangman Game</h2>
+            </div>
+            <div class="col-3">
+                <img class="cloud" src="assets/images/cloud.png">
+            </div>
+        </div>
+        
+    </header>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <img class="homer" src="assets/images/homer_thinking_01.png">
+            </div>
+            <div class="col-lg-6">
+                <div class="game">
+                    <h2 class="short-stack">Guess what word is Homer thinking of?</h2>
+                    <br>
+                    <h2 id="game"></h2>
+                </div>
+                <div class="hint row">
+                    <div class="col-6">
+                        <h2>Hint:</h2>
+                        <h4 id="hint"></h4>
+                    </div>
+                    <div class="col-6">
+                        <h2>Lives:</h2>
+                        <h3 id="lives"></h3>
+                    </div>
+                </div>
+                <div class="incorrectLetters">
+                    <h2>Incorrect letters guessed:</h2>
+                    <br>
+                    <h2 id="lettersGuessed"></h2>
+                </div>
+                <button class="btn btn-lg btn-warning" onclick="playAgain()">Play again</button>
+            </div>
+        </div>
+    </div>
     
-    <audio id="winAudio"><source src="assets/sounds/tada.mp3"></audio>
+    <audio id="winAudio"><source src="assets/sounds/woohoo.mp3"></audio>
     <audio id="dohAudio"><source src="assets/sounds/doh.mp3"></audio>
     <audio id="gameOverAudio"><source src="assets/sounds/homeCrap.wav"></audio>
-    <button onclick="playAgain()">Play again</button>
+    
+    
     <script src="assets/javascript/game_0.3.js"></script>
 </body>
 </html>

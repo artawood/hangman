@@ -1,0 +1,84 @@
+/* Google Font Families */
+
+.jua {
+    font-family: 'Jua', sans-serif;
+}
+
+.gloria {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.concert {
+    font-family: 'Concert One', cursive;
+}
+
+.fredoka {
+    font-family: 'Fredoka One', cursive;
+}
+
+h2, h3, h4 {
+    color: #FFFFFF;
+    font-family: 'Short Stack', cursive;
+}
+/* ===================================================== */
+
+/* Global Styles */
+
+body {
+    background-color: #4EB0DD;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #F7DA3A;
+    text-shadow: 1px 1px #F5A623;
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+
+.homer {
+    height: 80vh;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 25px;
+}
+
+.cloud {
+    width: 100%;
+}
+
+.cloud-1 {
+    width: 80%;
+}
+
+.cloud-2 {
+    width: 60%;
+}
+
+/* Game */
+
+.game {
+    padding: 20px;
+    border: 1px solid #FFFFFF;
+}
+
+.hint {
+    margin-top: 30px;
+}
+
+.incorrectLetters {
+    margin-top: 40px;
+}
