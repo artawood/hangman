@@ -15,8 +15,15 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
+<!-- Autoplays The Simpsons theme song on window load -->
+<audio id="intro" autoplay loop="true"><source src="assets/sounds/simpsons.mp3" type="audio/mpeg"></audio>
+    <script>
+        var intro = document.getElementById("intro");
+        window.onload = function introSound() {
+        intro.play();
+        }
+    </script>
 <body>
-    <audio id="intro" autoplay><source src="assets/sounds/simpsons.mp3" type="audio/mpeg"></audio>
     <header>
         <div class="row">
                 <div class="col-7">
