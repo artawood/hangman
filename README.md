@@ -3,11 +3,14 @@ Javascript Homework
 
 Updated 06/04/2018
 
+Version 0.4 06/06/2018
+- Added validator incorrect letter already guessed
+
 Version 0.3 06/04/2018
 - Added validation/failcheck
 - Added display of decrement counter for lives
 - Added hints
-- Added sounds, autoplay sound on windwo load
+- Added sounds, autoplay sound on window load
 - Added graphics
 - Added bootstrap framework and other custom styles
 
